@@ -418,8 +418,8 @@ class Patient:
         new_patient.write(str(patientage))
         new_patient.close()
 
-    global delete_line
-    def delete_line(filename, line_number):
+    global delete_line2
+    def delete_line2(filename, line_number):
         with open(filename) as file:
             lines = file.readlines()
         if (line_number <= len(lines)):
@@ -447,13 +447,13 @@ class Patient:
         edit_patient.write(str(newage))
         edit_patient.close()
         if newpatient == 12:
-            delete_line("patients.txt", 1)
+            delete_line2("patients.txt", 2)
         elif newpatient == 13:
-            delete_line("patients.txt", 2)
+            delete_line2("patients.txt", 3)
         elif newpatient == 14:
-            delete_line("patients.txt", 3)
+            delete_line2("patients.txt", 4)
         elif newpatient == 15:
-            delete_line("patients.txt", 4)
+            delete_line2("patients.txt", 5)
 
 patient1 = Patient(12, "Pankaj", "Cancer", "Male", 30)
 patient2 = Patient(13, "Sumit", "Cold", "Male", 23)
